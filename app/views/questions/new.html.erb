@@ -1,0 +1,7 @@
+<h1>New Question!</h1>
+
+<%= form_for @question do |q| %>
+ <%= q.text_field(:body, {placeholder: "Enter Question!"}) %>
+ <%= q.text_field(:answered) %>
+ <%= q.submit %>
+<% end %>

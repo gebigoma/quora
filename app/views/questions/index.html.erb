@@ -1,0 +1,7 @@
+<h1>Questions</h1>
+
+<ul>
+<% @questions.each do |q| %>
+<li><%= link_to(q.body, "/questions/#{q.id}") %></li>
+<% end%>
+</ul> 
