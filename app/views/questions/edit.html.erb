@@ -1,2 +1,7 @@
-<h1>Questions#edit</h1>
-<p>Find me in app/views/questions/edit.html.erb</p>
+<h1>Edit Question!</h1>
+
+<%= form_for @question, url: "/questions/#{@question.id}" do |f| %>
+  <%= f.text_field(:body, {placeholder: "Enter Question!"}) %>
+  <%= f.text_field(:answered) %>
+  <%= f.submit %>
+<% end %>

@@ -3,3 +3,4 @@
 <%= @question.body %>
 
 <%= link_to 'Edit', edit_question_path(@question) %>
+<%= link_to "Delete", show_question_path(@question), method: "delete" %>

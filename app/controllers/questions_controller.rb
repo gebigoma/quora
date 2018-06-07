@@ -29,10 +29,13 @@ class QuestionsController < ApplicationController
     @question.body = params[:question][:body]
     @question.answered = params[:question][:boolean]
     @question.save
-    # redirect_to 
+    redirect_to questions_path
   end
 
 
   def destroy
+    @question = Question.find(params[:id])
+    @question.destroy
+    redirect_to root_path
   end
 end
