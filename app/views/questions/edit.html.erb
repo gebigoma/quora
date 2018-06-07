@@ -1,7 +1,9 @@
 <h1>Edit Question!</h1>
 
-<%= form_for @question, url: "/questions/#{@question.id}" do |f| %>
-  <%= f.text_field(:body, {placeholder: "Enter Question!"}) %>
+<%# form_for @question, url: "/questions/#{@question.id}" do |f| %>
+<%= form_for @question do |f| %>
+  <%= f.text_field(:body) %>
   <%= f.text_field(:answered) %>
+  <%= f.text_field(:name, {placeholder: "Name"} ) %>
   <%= f.submit %>
 <% end %>

@@ -15,7 +15,8 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new
     @question.body = params[:question][:body]
-    @question.answered = params[:question][:boolean]
+    @question.answered = params[:question][:answered]
+    @question.name = params[:question][:name]
     @question.save
     redirect_to '/questions'
   end
@@ -27,9 +28,11 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     @question.body = params[:question][:body]
-    @question.answered = params[:question][:boolean]
+    @question.answered = params[:question][:answered]
+    @question.name = params[:question][:name]
     @question.save
-    redirect_to questions_path
+    redirect_to root_path
+    # redirect_to questions_path
   end
 
 

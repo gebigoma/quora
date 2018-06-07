@@ -1,6 +1,7 @@
-<h1>Show Question</h1>
-
-<%= @question.body %>
+<h1>Answer Question</h1>
+<hr>
+<h3><%= @question.body %><h3>
+<h3>Asked by: <%= @question.name %></h3>
 
 <%= link_to 'Edit', edit_question_path(@question) %>
 <%= link_to "Delete", show_question_path(@question), method: "delete" %>

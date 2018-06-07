@@ -2,6 +2,8 @@
 
 <ul>
 <% @questions.each do |q| %>
-<li><%= link_to(q.body, "/questions/#{q.id}") %></li>
+<li><%= link_to(q.body, "/questions/#{q.id}")%> <%= q.name%></li>
 <% end%>
 </ul> 
+
+<%= link_to "Ask a Question", new_question_path(@question) %>
